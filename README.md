@@ -9,3 +9,9 @@ Repo for a demo project
 
 ##Constraints
 For storing the information, the data can be saved in memory and not actually persisted to an external database.
+
+Current release 
+[![Build Status](https://travis-ci.com/Carloz81/fintech-api.svg?branch=master)](https://travis-ci.com/Carloz81/fintech-api)
+
+Progress release 
+[![Build Status](https://travis-ci.com/Carloz81/fintech-api.svg?branch=develop)](https://travis-ci.com/Carloz81/fintech-api)
