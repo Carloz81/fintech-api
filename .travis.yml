@@ -1,0 +1,12 @@
+language: java
+jdk: openjdk8
+dist: xenial
+os: linux
+
+before_install:
+- chmod +x mvnw
+
+branches:
+  only:
+  - master
+  - develop
