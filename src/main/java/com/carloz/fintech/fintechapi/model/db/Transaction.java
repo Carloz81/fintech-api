@@ -1,4 +1,4 @@
-package com.carloz.fintech.fintechapi.model;
+package com.carloz.fintech.fintechapi.model.db;
 
 import javax.persistence.Entity;
 import javax.validation.constraints.NotNull;

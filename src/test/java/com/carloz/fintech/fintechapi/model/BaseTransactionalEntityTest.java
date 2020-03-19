@@ -1,6 +1,8 @@
 package com.carloz.fintech.fintechapi.model;
 
 
+import com.carloz.fintech.fintechapi.model.db.Account;
+import com.carloz.fintech.fintechapi.model.db.BaseTransactionalEntity;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
