@@ -7,6 +7,11 @@ import org.springframework.data.repository.query.Param;
 
 import java.util.List;
 
+/**
+ * Spring Data JPA repository for {@link Account}Account entities.
+ *
+ * @author Carlo Santovito
+ */
 public interface AccountRepository extends JpaRepository<Account, Long> {
 
     /**

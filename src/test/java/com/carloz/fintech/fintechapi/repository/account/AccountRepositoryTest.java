@@ -17,6 +17,7 @@ public class AccountRepositoryTest {
     @DisplayName("Testing the findByCustomer")
     public void findByCustomerFound() {
         accountRepository.save(new Account(1L));
+        //TODO change the test to be more precise
         Assertions.assertTrue(accountRepository.findByCustomer(1L).size()==1);
     }
 
