@@ -3,7 +3,7 @@ package com.carloz.fintech.fintechapi.model;
 import java.util.List;
 
 /**
- * CustomerAccountInformation class map the information
+ * CustomerAccountInformation class map the informations
  * about the customer and all its accounts
  *
  * @author Carlo Santovito
