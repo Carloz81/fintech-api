@@ -1,7 +1,10 @@
 package com.carloz.fintech.fintechapi.model;
 
+import com.carloz.fintech.fintechapi.model.db.Account;
 import com.carloz.fintech.fintechapi.model.db.Transaction;
+import lombok.Builder;
 
+import javax.validation.constraints.NotNull;
 import java.util.List;
 
 /**
@@ -22,8 +25,17 @@ public class AccountInformation {
      */
     private double balance;
 
+    /**
+     * Account transaction list
+     */
     private List<Transaction> transactionList;
 
+    public AccountInformation(){};
+
+    public AccountInformation(@NotNull Account account) {
+        this.accountNumber = account.getId();
+        this.balance = account.getBalance();
+    }
 
     public Long getAccountNumber() {
         return accountNumber;
