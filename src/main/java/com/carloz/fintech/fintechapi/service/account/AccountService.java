@@ -1,5 +1,6 @@
 package com.carloz.fintech.fintechapi.service.account;
 
+import com.carloz.fintech.fintechapi.Exception.AccountException;
 import com.carloz.fintech.fintechapi.Exception.AccountNotFoundException;
 import com.carloz.fintech.fintechapi.Exception.CustomerNotFoundException;
 import com.carloz.fintech.fintechapi.Exception.TransactionException;
@@ -98,7 +99,9 @@ public class AccountService implements IAccountService{
         logger.info("Account-createNewAccountByCustomer: create and save new account for the given customer");
         Account newAccount = new Account(customerID);
         newAccount = accountRepository.save(newAccount);
-
+        if(newAccount==null) {
+            throw new AccountException("Error while saving the new account");
+        }
         logger.info("Account-createNewAccountByCustomer: check if initialCredit is not 0, if true create the first transaction on the account");
         if(initialCredit != 0){
             Optional<Transaction> firstTransaction = iTransactionService.createTransaction(newAccount.getId(), initialCredit);
