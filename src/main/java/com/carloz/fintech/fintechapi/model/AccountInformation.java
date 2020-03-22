@@ -3,6 +3,8 @@ package com.carloz.fintech.fintechapi.model;
 import com.carloz.fintech.fintechapi.model.db.Account;
 import com.carloz.fintech.fintechapi.model.db.Transaction;
 import lombok.Builder;
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.validation.constraints.NotNull;
 import java.util.List;
@@ -13,6 +15,8 @@ import java.util.List;
  *
  * @author Carlo Santovito
  */
+@Getter
+@Setter
 public class AccountInformation {
 
     /**
@@ -30,34 +34,10 @@ public class AccountInformation {
      */
     private List<Transaction> transactionList;
 
-    public AccountInformation(){};
+    public AccountInformation(){}
 
     public AccountInformation(@NotNull Account account) {
         this.accountNumber = account.getId();
         this.balance = account.getBalance();
-    }
-
-    public Long getAccountNumber() {
-        return accountNumber;
-    }
-
-    public void setAccountNumber(Long accountNumber) {
-        this.accountNumber = accountNumber;
-    }
-
-    public double getBalance() {
-        return balance;
-    }
-
-    public void setBalance(double balance) {
-        this.balance = balance;
-    }
-
-    public List<Transaction> getTransactionList() {
-        return transactionList;
-    }
-
-    public void setTransactionList(List<Transaction> transactionList) {
-        this.transactionList = transactionList;
     }
 }

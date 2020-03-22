@@ -7,6 +7,8 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 
+import java.util.List;
+
 @DataJpaTest
 public class AccountRepositoryTest {
 
@@ -17,8 +19,11 @@ public class AccountRepositoryTest {
     @DisplayName("Testing the findByCustomer")
     public void findByCustomerFound() {
         accountRepository.save(new Account(1L));
-        //TODO change the test to be more precise
-        Assertions.assertTrue(accountRepository.findByCustomer(1L).size()==1);
+        List<Account> lstAccounts = accountRepository.findByCustomer(1L);
+        Assertions.assertTrue(lstAccounts.size()==1);
+        Assertions.assertTrue(lstAccounts.get(0).getCustomerID().equals(1L));
+        Assertions.assertTrue(lstAccounts.get(0).getBalance() == 0);
+        Assertions.assertTrue(lstAccounts.get(0).getId() != null);
     }
 
     @Test

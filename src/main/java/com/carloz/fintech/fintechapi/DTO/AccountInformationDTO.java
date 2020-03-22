@@ -1,5 +1,8 @@
 package com.carloz.fintech.fintechapi.DTO;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.util.List;
 
 /**
@@ -8,6 +11,8 @@ import java.util.List;
  *
  * @author Carlo Santovito
  */
+@Getter
+@Setter
 public class AccountInformationDTO {
 
     private Long accountNumber;
@@ -16,28 +21,4 @@ public class AccountInformationDTO {
 
     private List<TransactionDTO> transactionList;
 
-
-    public Long getAccountNumber() {
-        return accountNumber;
-    }
-
-    public void setAccountNumber(Long accountNumber) {
-        this.accountNumber = accountNumber;
-    }
-
-    public double getBalance() {
-        return balance;
-    }
-
-    public void setBalance(double balance) {
-        this.balance = balance;
-    }
-
-    public List<TransactionDTO> getTransactionList() {
-        return transactionList;
-    }
-
-    public void setTransactionList(List<TransactionDTO> transactionList) {
-        this.transactionList = transactionList;
-    }
 }

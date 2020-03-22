@@ -1,5 +1,8 @@
 package com.carloz.fintech.fintechapi.model;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.util.List;
 
 /**
@@ -8,6 +11,8 @@ import java.util.List;
  *
  * @author Carlo Santovito
  */
+@Getter
+@Setter
 public class CustomerAccountInformation {
 
     private String customerName;
@@ -15,27 +20,4 @@ public class CustomerAccountInformation {
     private String customerSurname;
 
     private List<AccountInformation> accounts;
-
-
-    public String getCustomerName() { return customerName; }
-
-    public void setCustomerName(String customerName) {
-        this.customerName = customerName;
-    }
-
-    public String getCustomerSurname() {
-        return customerSurname;
-    }
-
-    public void setCustomerSurname(String customerSurname) {
-        this.customerSurname = customerSurname;
-    }
-
-    public List<AccountInformation> getAccounts() {
-        return accounts;
-    }
-
-    public void setAccounts(List<AccountInformation> accounts) {
-        this.accounts = accounts;
-    }
 }

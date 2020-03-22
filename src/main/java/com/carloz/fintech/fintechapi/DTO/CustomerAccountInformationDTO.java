@@ -1,5 +1,8 @@
 package com.carloz.fintech.fintechapi.DTO;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.util.List;
 
 /**
@@ -8,6 +11,8 @@ import java.util.List;
  *
  * @author Carlo Santovito
  */
+@Getter
+@Setter
 public class CustomerAccountInformationDTO {
 
     private String customerName;
@@ -15,28 +20,4 @@ public class CustomerAccountInformationDTO {
     private String customerSurname;
 
     private List<AccountInformationDTO> accounts;
-
-    public String getCustomerName() {
-        return customerName;
-    }
-
-    public void setCustomerName(String customerName) {
-        this.customerName = customerName;
-    }
-
-    public String getCustomerSurname() {
-        return customerSurname;
-    }
-
-    public void setCustomerSurname(String customerSurname) {
-        this.customerSurname = customerSurname;
-    }
-
-    public List<AccountInformationDTO> getAccounts() {
-        return accounts;
-    }
-
-    public void setAccounts(List<AccountInformationDTO> accounts) {
-        this.accounts = accounts;
-    }
 }
