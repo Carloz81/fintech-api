@@ -1,5 +1,8 @@
 package com.carloz.fintech.fintechapi.model.db;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.Entity;
 import javax.validation.constraints.NotNull;
 
@@ -9,6 +12,8 @@ import javax.validation.constraints.NotNull;
  * @author Carlo Santovito
  */
 @Entity
+@Getter
+@Setter
 public class Account extends BaseTransactionalEntity {
 
     private static final long serialVersionUID = 1L;
@@ -24,22 +29,6 @@ public class Account extends BaseTransactionalEntity {
      * transaction is registered on this account
      */
     private double balance;
-
-    public Long getCustomerID() {
-        return customerID;
-    }
-
-    public void setCustomerID(Long customerID) {
-        this.customerID = customerID;
-    }
-
-    public double getBalance() {
-        return balance;
-    }
-
-    public void setBalance(double balance) {
-        this.balance = balance;
-    }
 
     /**
      * No-args constructor
