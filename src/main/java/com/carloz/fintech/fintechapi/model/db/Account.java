@@ -1,4 +1,4 @@
-package com.carloz.fintech.fintechapi.model;
+package com.carloz.fintech.fintechapi.model.db;
 
 import javax.persistence.Entity;
 import javax.validation.constraints.NotNull;
@@ -19,12 +19,26 @@ public class Account extends BaseTransactionalEntity {
     @NotNull
     private Long customerID;
 
+    /**
+     * Balance of the account, updated every time a
+     * transaction is registered on this account
+     */
+    private double balance;
+
     public Long getCustomerID() {
         return customerID;
     }
 
     public void setCustomerID(Long customerID) {
         this.customerID = customerID;
+    }
+
+    public double getBalance() {
+        return balance;
+    }
+
+    public void setBalance(double balance) {
+        this.balance = balance;
     }
 
     /**

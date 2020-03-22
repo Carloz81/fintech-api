@@ -1,4 +1,4 @@
-package com.carloz.fintech.fintechapi.model;
+package com.carloz.fintech.fintechapi.model.db;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
@@ -25,7 +25,7 @@ public class BaseTransactionalEntity implements Serializable {
     /**
      * The time when the entity was created
      */
-    @NotNull
+    @Column(name = "CREATIONTIME")
     private Instant creationTime;
 
     public Long getId() {
