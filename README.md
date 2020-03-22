@@ -44,7 +44,8 @@ Progress release
 
 * Open the browser and type: http://localhost:8080/swagger-ui.html
 From the swagger interface you can see the 2 endpoint exposed 
-under account-controller and you can test them.
+under account-controller and you can test them. 
+There are 4 customers already inserted in the DB (id 1-4)
 
 You can run the app with docker too.<br> 
 First build the app with maven and after execute the command below
